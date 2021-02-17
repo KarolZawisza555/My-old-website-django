@@ -1,0 +1,24 @@
+{% extends "base_pro.html" %}
+{% block title %} Task Done Today {% endblock %}
+{% block content %}
+<ul>
+<li><a href="{% url "production:task_list" %}">Task list</a></li>
+<li><a href="{% url "production:task_done_today" %}">Task done today</a></li>
+<li><a href="{% url "production:task_done_last_week" %}">Task done last week</a></li>
+</ul>
+<br><br>
+<br>
+<div >
+{% for task in task_list %}
+<div class="style2">
+
+<ul>
+    <li style="float: left: ;"><a>{{ task.title }} </a></li>
+    <li style="float: right;"><a>DONE</a></li>
+</ul>
+<br>
+
+
+{% endfor %}
+</div>
+{% endblock %}
