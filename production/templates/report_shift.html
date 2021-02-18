@@ -1,0 +1,10 @@
+{% extends "base_pro.html" %}
+{% block title %}
+REPORT SHIFT
+{% endblock %}
+{% block content %}
+<h1>Report SHIFT</h1>
+<h2 ><a style="color: rgb(255, 255, 255)" href="{% url "production:report_shift" 1 %}">SHIFT 1</a></h2>
+<h2 ><a style="color: rgb(0, 0, 0)" href="{% url "production:report_shift" 2 %}">SHIFT 2</a></h2>
+<h2 ><a style="color: rgb(229, 255, 0)" href="{% url "production:report_shift" 3 %}">SHIFT 3</a></h2>
+{% endblock %}

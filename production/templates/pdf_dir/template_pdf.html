@@ -1,0 +1,17 @@
+<html>
+<body>
+<div>
+    <h1 >Holiday request</h1>
+    <h3>Date of request </h3>  <i>{{ h_request.created }}</i>
+    <h3>Request ID &nbsp;&nbsp;  {{ h_request.id }} </h3>
+    <h3>Name: &nbsp;&nbsp; {{ h_request.first_name }} </h3>
+    <h3>Surname:  &nbsp;&nbsp; {{ h_request.surname }}</h3>
+    <h3>Email:  &nbsp;&nbsp;{{ h_request.email }}</h3>
+    <h3>Department ID &nbsp;&nbsp;  {{ h_request.department }}</h3>
+    <h3>Date begin:&nbsp;&nbsp;   <i>{{ h_request.date_begin }} </i></h3>
+    <h3>Date end: &nbsp;&nbsp;   <i>{{ h_request.date_end }}</i> </h3>
+    <h3>Notice:</h3>    {{ h_request.notice|safe }}
+    
+</div>
+</body>
+</html>

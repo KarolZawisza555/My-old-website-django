@@ -1,0 +1,15 @@
+{% extends "base_pro.html" %}
+{% block title %}HOLIDAY REQUEST{% endblock %}
+{% block content %}
+{% if POST %}
+<h1>Your request has been send</h1>
+<br> 
+<h3 style="text-align: center;"><a href="{% url "production:h_request_pdf" number_id %}">Download PDF file</a></h3>
+{% else %}
+<form action = "." method = "POST">
+    {{ forms.as_p }}
+    {{ forms.media }}
+    {% csrf_token %}
+<input type="submit" value="Send and make a pdf file">
+{% endif %}
+{% endblock %}
