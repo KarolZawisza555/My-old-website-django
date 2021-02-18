@@ -95,9 +95,3 @@ STATIC_URL = '/static/'
 PDF_CSS = os.path.join(BASE_DIR,'production/static/css/pdf.css')
 
 STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'static'),]
-
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = '2021resumecv@gmail.com'
-EMAIL_HOST_PASSWORD = '3x5x2x7x4!'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
