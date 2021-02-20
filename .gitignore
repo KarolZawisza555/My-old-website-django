@@ -1,3 +1,4 @@
 /mywww/settings.py
 db.sqlite3
 *pyc
+/redis-6.0.10
