@@ -165,7 +165,7 @@ def delete_task(request,pk):
 def task_done_today(request):
     template = 'task_list_done.html'
     task_list = Task.objects.filter(done=True, created=TODAY)
-    context = {'task_list': task_list,}
+    context = {'task_list': task_list,'TODAY':TODAY}
     Info.objects.create(title='task_done_today')
     return render(request, template, context)
 
