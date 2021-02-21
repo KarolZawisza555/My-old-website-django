@@ -14,6 +14,9 @@ from django.http import JsonResponse
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .serializers import ReportSerializer
+import redis 
+
+r = redis.StrictRedis(host='localhost',port=6379,db=0)
 
 
 TODAY = timezone.now().date()
@@ -206,6 +209,18 @@ def single_report_api_json(request,pk):
     serializers = ReportSerializer(reports, many=False)
     return JsonResponse(serializers.data)
 
+@api_view(['GET'])
+def redis_dict_json(request):
+    keys = r.keys()
+    dict1 = {}
+    for i in keys:
+        a = i.decode('utf-8')
+        if str(TODAY) in a:       
+            b = r.get(i).decode('utf-8')
+            dict2 = {a:int(b)}
+            dict1.update(dict2)
+
+    return JsonResponse(dict1)
 
 
 

@@ -26,4 +26,5 @@ urlpatterns = [
     path('api/report-list/<str:pk>/', views.single_report_api, name = 'single_api_report'),
     path('api/report-list-json/', views.reports_api_json, name = 'api_reports_json'),
     path('api/report-list-json/<str:pk>/', views.single_report_api_json, name  =  'single_api_report_json'),
+    path('api/redis-json/', views.redis_dict_json, name  =  'redis_dict_json'),
             ]
