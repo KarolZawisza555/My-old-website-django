@@ -19,11 +19,10 @@
 <div class="style2">
 
 <ul>
-    <li><a>{{ task.title }}</a></li>
+    <li><a style="background-color: #0F88F2;">{{ task.title }}</a></li>
     <li style="float: right;"><a href="{% url "production:done_task" task.id   %}">DONE</a></li>
     <li style="float: right;"><a href="{% url "production:delete_task" task.id   %}">DELETE</a></li>
-
-    <li style="float: right;"><a>{{ task.time }}</a></li>
+    <li style="float: right;"><a style="background-color: #0F88F2;">{{ task.time }}</a></li>
 </ul>
 <br>
 
